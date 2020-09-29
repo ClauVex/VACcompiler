@@ -5,7 +5,7 @@ body {
     background: #1d1f20;
 }
 
-body {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,6 @@ body {
 .customTextArea {
     display: flex;
     width: 550px;
-    margin: 100px auto 0;
 }
 
 .customTextArea textarea {
@@ -77,4 +76,11 @@ body {
     align-items: center;
     justify-content: center;
     height: 20px;
+}
+
+.title {
+    text-align: center;
+    color: black;
+    -webkit-text-stroke: 1px white;
+    font-size: 2em;
 }
