@@ -2,212 +2,63 @@ function Automata() {
     var variable = document.getElementById("compiler").value;
     console.log("DATA: " + variable);
     switch (variable) {
-        case 0:
+        case 'c':
             break;
 
-        case 1:
+        case 'l':
             break;
 
-        case 2:
+        case 'e':
             break;
 
-        case 3:
+        case 'a':
             break;
 
-        case 4:
+        case 'r':
             break;
 
-        case 5:
+        case 'o':
             break;
 
-        case 6:
+        case 'o':
             break;
 
-        case 7:
+        case 'n':
             break;
 
-        case 8:
+        case 'd':
             break;
 
-        case 9:
+        case 't':
             break;
 
-        case 10:
+        case 'i':
             break;
 
-        case 11:
+        case 'h':
             break;
 
-        case 12:
+        case 'g':
             break;
 
-        case 13:
+        case 'm':
             break;
 
-        case 14:
+        case 's':
             break;
 
-        case 15:
+        case 'u':
             break;
 
-        case 16:
+        case 'p':
             break;
 
-        case 17:
+        case 'z':
             break;
 
-        case 18:
+        case 'b':
             break;
-
-        case 19:
-            break;
-
-        case 20:
-            break;
-
-        case 21:
-            break;
-
-        case 22:
-            break;
-
-        case 23:
-            break;
-
-        case 24:
-            break;
-
-        case 25:
-            break;
-
-        case 26:
-            break;
-
-        case 27:
-            break;
-
-        case 28:
-            break;
-
-        case 29:
-            break;
-
-        case 30:
-            break;
-
-        case 31:
-            break;
-
-        case 32:
-            break;
-
-        case 33:
-            break;
-
-        case 34:
-            break;
-
-        case 35:
-            break;
-
-        case 36:
-            break;
-
-        case 37:
-            break;
-
-        case 38:
-            break;
-
-        case 39:
-            break;
-
-        case 40:
-            break;
-
-        case 41:
-            break;
-
-        case 42:
-            break;
-
-        case 43:
-            break;
-
-        case 44:
-            break;
-
-        case 45:
-            break;
-
-        case 46:
-            break;
-
-        case 47:
-            break;
-
-        case 48:
-            break;
-
-        case 49:
-            break;
-
-        case 50:
-            break;
-
-        case 51:
-            break;
-
-        case 52:
-            break;
-
-        case 53:
-            break;
-
-        case 54:
-            break;
-
-        case 55:
-            break;
-
-        case 56:
+        default:
             break;
-
-        case 57:
-            break;
-
-        case 58:
-            break;
-
-        case 59:
-            break;
-
-        case 60:
-            break;
-
-        case 61:
-            break;
-
-        case 62:
-            break;
-
-        case 63:
-            break;
-
-        case 64:
-            break;
-
-        case 65:
-            break;
-
-        case 66:
-            break;
-
-        case 67:
-            break;
-
-        case 68:
-            break;
-
     }
 }
