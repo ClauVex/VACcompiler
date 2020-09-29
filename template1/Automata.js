@@ -1,27 +1,36 @@
 function Automata() {
-    var variable = document.getElementById("compiler").value;
-    console.log("DATA: " + variable);
-    let words = variable.split(" ");
+    var input = document.getElementById("compiler").value;
+    let words = input.split(" ");
     let end = false;
-    let contador = 0;
-    let estadoActual = 0;
-    let estadosAceptacion = ['12','20','23','31','46','59','62','67','68'];
+    let counter = 0;
+    let actualState = 0;
+    let isValid = false;
+    let finalValues = [12,20,23,31,46,59,62,67,68];
     
     while(!end){
-    if(contador > words.length - 1){
+    if(counter > words.length - 1){
         end = true;
     }else {
         let i = 0;
         let letter;
-        while(i <= words[contador].length - 1){
-            letter = words[contador].charAt(i);
-            console.log(letter)
-            console.log("i: "+i+"    contador:"+contador)
-            switch(estadoActual){
+        while(i <= words[counter].length - 1){
+            letter = words[counter].charAt(i);
+            switch(actualState){
                 case 0:
+                    if(letter == 'c'){
+                        actualState = 1;
+                        console.log("Success");
+                    } else if(letter == 'i'){
+                        actualState = 4;
+                    }
                 break;
         
                 case 1:
+                    if(letter == 'l'){
+                        actualState = 9;
+                    } else if(letter == 'o'){
+                        actualState = 13;
+                    }
                 break;
         
                 case 2:
@@ -31,6 +40,9 @@ function Automata() {
                 break;
         
                 case 4:
+                    if(letter == 'n'){
+                        actualState = 32;
+                    }
                 break;
         
                 case 5:
@@ -46,39 +58,71 @@ function Automata() {
                 break;
         
                 case 9:
+                    if(letter == 'e'){
+                        actualState = 10;
+                    }
                 break;
         
                 case 10:
+                    if(letter == 'a'){
+                        actualState = 11;
+                    }
                 break;
         
                 case 11:
+                    if(letter == 'r'){
+                        actualState = 12;
+                    }
                 break;
         
                 case 12:
+                    actualState = -1;
                 break;
         
                 case 13:
+                    if(letter == 'n'){
+                        actualState = 14;
+                    }
                 break;
         
                 case 14:
+                    if(letter == 'd'){
+                        actualState = 15;
+                    }
                 break;
         
                 case 15:
+                    if(letter == 'i'){
+                        actualState = 16;
+                    }
                 break;
         
                 case 16:
+                    if(letter == 't'){
+                        actualState = 17;
+                    }
                 break;
         
                 case 17:
+                    if(letter == 'i'){
+                        actualState = 18;
+                    }
                 break;
         
                 case 18:
+                    if(letter == 'o'){
+                        actualState = 19;
+                    }
                 break;
         
                 case 19:
+                    if(letter == 'n'){
+                        actualState = 20;
+                    }
                 break;
         
                 case 20:
+                    actualState = -1;
                 break;
         
                 case 21:
@@ -115,18 +159,33 @@ function Automata() {
                 break;
         
                 case 32:
+                    if(letter == 'h'){
+                        actualState = 33;
+                    }
                 break;
         
                 case 33:
+                    if(letter == 'e'){
+                        actualState = 34;
+                    }
                 break;
         
                 case 34:
+                    if(letter == 'r'){
+                        actualState = 35;
+                    }
                 break;
         
                 case 35:
+                    if(letter == 'i'){
+                        actualState = 36;
+                    }
                 break;
         
                 case 36:
+                    if(letter == 't'){
+                        actualState = 68;
+                    }
                 break;
         
                 case 37:
@@ -223,14 +282,28 @@ function Automata() {
                 break;
         
                 case 68:
+                    actualState = -1;
                 break;
 
                 default:
+                    actualState = -1;
                 break;
                 }
                 i++;
             }
         }
-        contador++;
+        counter++;
+        for(i in finalValues){
+            if(finalValues[i] == actualState){
+                isValid = true;
+            }
+        }
     }
+
+    if(isValid){
+        alert('La cadena es correcta');
+    } else {
+        alert('La cadena es incorrecta');
+    }
+    
 }
