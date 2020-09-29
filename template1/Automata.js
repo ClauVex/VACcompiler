@@ -5,108 +5,99 @@ function Automata() {
     let counter = 0;
     let actualState = 0;
     let isValid = false;
-    let finalValues = [12,20,23,31,46,59,62,67,68];
-    let textAlert = "";
-    
-    while(!end){
-    if(counter > words.length - 1){
-        end = true;
-    }else {
-        let i = 0;
-        let letter;
-        while(i <= words[counter].length - 1){
-            letter = words[counter].charAt(i);
-            switch(actualState){
-                case 0:
-                    if(letter == 'c'){
-                        actualState = 1;
-                    } else if(letter == 'o'){
-                        actualState = 6;
-                    } else if(letter == 's'){
-                        actualState = 8;
-                    } else if(letter == 'd'){
-                        actualState = 2;
-                    } else if(letter == 'e'){
-                        actualState = 3;
-                    } else if(letter == 'r'){
-                        actualState = 7;
-                    }
-                break;
-        
-                case 1:
-                    if(letter == 'l'){
-                        actualState = 9;
-                    } else if(letter == 'o'){
-                        actualState = 13;
-                    }
-                break;
-        
-                case 2:
-                    if(letter == 'a'){
-                        actualState = 21;
-                    }
-                break;
-        
-                case 3:
-                    if(letter == 'n'){
-                        actualState = 24;
-                    }
-                break;
-        
-                case 4:
-                    if(letter == 'n'){
-                        actualState = 32;
-                    }
-                break;
-        
-                case 5:
-                break;
-        
-                case 6:
-                    if(letter == 'u'){
-                        actualState = 42;
-                    } else{
-                        actualState = -1;
-                    }
-                break;
-        
-                case 7:
-                    if(letter == 'n'){
-                        actualState = 47;
-                    }
-                break;
-        
-                case 8:
-                    if (letter == 't') {
-                        actualState = 60;
-                    } else if (letter == 'u') {
-                        actualState = 52;
-                    } else if (letter == 't') {
-                        actualState = 63;
-                    } else{
-                        actualState = -1;
-                    }
-                break;
-        
-                case 9:
-                    if(letter == 'e'){
-                        actualState = 10;
-                    }
-                break;
-        
-                case 10:
-                    if(letter == 'a'){
-                        actualState = 11;
-                    }
-                break;
-        
-                case 11:
-                    if(letter == 'r'){
-                        actualState = 12;
-                    }
-                break;
-        
-                case 12:
+    let finalValues = [12, 20, 23, 31, 46, 59, 62, 66, 67];
+
+    while (!end) {
+        if (counter > words.length - 1) {
+            end = true;
+        } else {
+            let i = 0;
+            let letter;
+            while (i <= words[counter].length - 1) {
+                letter = words[counter].charAt(i);
+                switch (actualState) {
+                    case 0:
+                        if (letter == 'c') {
+                            actualState = 1;
+                        } else if (letter == 'i') {
+                            actualState = 4;
+                        } else if (letter == 'o') {
+                            actualState = 6;
+                        } else if (letter == 's') {
+                            actualState = 8;
+                        } else if (letter = 'm') {
+                            actualState = 5;
+                        }
+                        break;
+
+                    case 1:
+                        if (letter == 'l') {
+                            actualState = 9;
+                        } else if (letter == 'o') {
+                            actualState = 13;
+                        }
+                        break;
+
+                    case 2:
+                        break;
+
+                    case 3:
+                        break;
+
+                    case 4:
+                        if (letter == 'n') {
+                            actualState = 32;
+                        } else if (letter = 'g') {
+                            actualState = 27;
+                        }
+                        break;
+
+                    case 5:
+                        if (letter == 'e') {
+                            actualState = 37;
+                        }
+                        break;
+
+                    case 6:
+                        if (letter == 'u') {
+                            actualState = 42;
+                        } else {
+                            actualState = -1;
+                        }
+                        break;
+
+                    case 7:
+                        break;
+
+                    case 8:
+                        if (letter == 't') {
+                            actualState = 60;
+                        } else if (letter == 'u') {
+                            actualState = 52;
+                        } else {
+                            actualState = -1;
+                        }
+                        break;
+
+                    case 9:
+                        if (letter == 'e') {
+                            actualState = 10;
+                        }
+                        break;
+
+                    case 10:
+                        if (letter == 'a') {
+                            actualState = 11;
+                        }
+                        break;
+
+                    case 11:
+                        if (letter == 'r') {
+                            actualState = 12;
+                        }
+                        break;
+
+                    case 12:
                     actualState = -1;
                 break;
         
@@ -318,105 +309,111 @@ function Automata() {
                 case 52:
                     if (letter == 'p') {
                         actualState = 53;
-                    } else{
-                        actualState = -1;
-                    }
-                break;
-        
-                case 53:
-                    if (letter == 'e') {
-                        actualState = 54;
-                    } else{
-                        actualState = -1;
-                    }
-                break;
-        
-                case 54:
-                    if (letter == 'r') {
-                        actualState = 55;
-                    } else{
-                        actualState = -1;
-                    }
-                break;
-        
-                case 55:
-                    if (letter == 's') {
-                        actualState = 56;
-                    } else{
-                        actualState = -1;
-                    }
-                break;
-        
-                case 56:
-                    if (letter == 'e') {
-                        actualState = 57;
-                    } else{
-                        actualState = -1;
-                    }
-                break;
-        
-                case 57:
-                    if (letter == 'd') {
-                        actualState = 58;
-                    } else{
-                        actualState = -1;
-                    }
-                break;
-        
-                case 58:
-                    if (letter == 'e') {
-                        actualState = 59;
-                    } else{
-                        actualState = -1;
-                    }
-                break;
-        
-                case 59:
-                    actualState = -1;
-                break;
-        
-                case 60:
-                    if (letter == 'o') {
-                        actualState = 61;
-                    } else{
-                        actualState = -1;
-                    }
-                break;
-        
-                case 61:
-                    if (letter = 'p') {
-                        actualState = 62;
-                    } else{
-                        actualState = -1;
-                    }
-                break;
-        
-                case 62:
-                    actualState = -1;
-                break;
-        
-                case 63:
-                break;
-        
-                case 64:
-                break;
-        
-                case 65:
-                break;
-        
-                case 66:
-                break;
-        
-                case 67:
-                break;
-        
-                case 68:
-                    actualState = -1;
-                break;
+                    } else {
+                            actualState = -1;
+                        }
+                        break;
 
-                default:
-                    actualState = -1;
-                break;
+                    case 53:
+                        if (letter == 'e') {
+                            actualState = 54;
+                        } else {
+                            actualState = -1;
+                        }
+                        break;
+
+                    case 54:
+                        if (letter == 'r') {
+                            actualState = 55;
+                        } else {
+                            actualState = -1;
+                        }
+                        break;
+
+                    case 55:
+                        if (letter == 's') {
+                            actualState = 56;
+                        } else {
+                            actualState = -1;
+                        }
+                        break;
+
+                    case 56:
+                        if (letter == 'e') {
+                            actualState = 57;
+                        } else {
+                            actualState = -1;
+                        }
+                        break;
+
+                    case 57:
+                        if (letter == 'd') {
+                            actualState = 58;
+                        } else {
+                            actualState = -1;
+                        }
+                        break;
+
+                    case 58:
+                        if (letter == 'e') {
+                            actualState = 59;
+                        } else {
+                            actualState = -1;
+                        }
+                        break;
+
+                    case 59:
+                        actualState = -1;
+                        break;
+
+                    case 60:
+                        if (letter == 'o') {
+                            actualState = 61;
+                        } else if (letter == 'e') {
+                            actualState = 63;
+                        }
+                        break;
+
+                    case 61:
+                        if (letter = 'p') {
+                            actualState = 62;
+                        } else {
+                            actualState = -1;
+                        }
+                        break;
+
+                    case 62:
+                        actualState = -1;
+                        break;
+
+                    case 63:
+                        if (letter == 'p') {
+                            actualState = 64;
+                        }
+                        break;
+
+                    case 64:
+                        if (letter == 't') {
+                            actualState = 65
+                        }
+                        break;
+
+                    case 65:
+                        if (letter == 'o') {
+                            actualState = 66;
+                        }
+                        break;
+
+                    case 66:
+                        actualState = -1;
+                        break;
+
+                    case 67:
+                        actualState = -1;
+                        break;
+                    default:
+                        actualState = -1;
+                        break;
                 }
                 i++;
             }
