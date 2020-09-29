@@ -5,7 +5,7 @@ body {
     background: #1d1f20;
 }
 
-body {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,4 +77,11 @@ body {
     align-items: center;
     justify-content: center;
     height: 20px;
+}
+
+.title {
+    text-align: center;
+    color: black;
+    -webkit-text-stroke: 1px white;
+    font-size: 2em;
 }
