@@ -16,90 +16,122 @@ function Automata() {
             let letter;
             while (i <= words[counter].length - 1) {
                 letter = words[counter].charAt(i);
+                console.log(letter)
                 switch (actualState) {
-                    case 0:
-                        if (letter == 'c') {
-                            actualState = 1;
-                        } else if (letter == 'i') {
-                            actualState = 4;
-                        } else if (letter == 'o') {
-                            actualState = 6;
-                        } else if (letter == 's') {
-                            actualState = 8;
-                        } else if (letter = 'm') {
-                            actualState = 5;
-                        }
-                        break;
+                case 0:
+                    if (letter == 'c') {
+                        actualState = 1;
+                    } else if(letter == 'i') {
+                        actualState = 4;
+                    } else if(letter == 'o') {
+                        actualState = 6;
+                    } else if(letter == 's') {
+                        actualState = 8;
+                    } else if(letter == 'm') {
+                        actualState = 5;
+                    }else if(letter == 'd') {
+                        actualState = 2;
+                    } else if(letter == 'r') {
+                        actualState = 7;
+                    } else if(letter == 'e') {
+                        actualState = 3;
+                    }  
+                    break;
 
-                    case 1:
-                        if (letter == 'l') {
-                            actualState = 9;
-                        } else if (letter == 'o') {
-                            actualState = 13;
-                        }
-                        break;
+                case 1:
+                    if (letter == 'l') {
+                        actualState = 9;
+                    } else if (letter == 'o') {
+                        actualState = 13;
+                    } else {
+                        actualState = - 1;
+                    }
+                    break;
 
-                    case 2:
-                        break;
+                case 2:
+                    if(letter == 'a'){
+                        actualState = 21;
+                    }
+                    break;
 
-                    case 3:
-                        break;
+                case 3:
+                    if(letter == 'n'){
+                        actualState = 24;
+                    } else {
+                        actualState = - 1;
+                    }
+                    break;
 
-                    case 4:
-                        if (letter == 'n') {
-                            actualState = 32;
-                        } else if (letter = 'g') {
-                            actualState = 27;
-                        }
-                        break;
+                case 4:
+                    if (letter == 'n') {
+                        actualState = 32;
+                    } else if (letter = 'g') {
+                        actualState = 27;
+                    } else {
+                        actualState = - 1;
+                    }
+                    break;
 
-                    case 5:
-                        if (letter == 'e') {
-                            actualState = 37;
-                        }
-                        break;
+                case 5:
+                    if (letter == 'e') {
+                        actualState = 37;
+                    } else {
+                        actualState = - 1;
+                    }
+                    break;
 
-                    case 6:
-                        if (letter == 'u') {
-                            actualState = 42;
-                        } else {
-                            actualState = -1;
-                        }
-                        break;
+                case 6:
+                    if (letter == 'u') {
+                        actualState = 42;
+                    } else {
+                        actualState = -1;
+                    }
+                    break;
 
-                    case 7:
-                        break;
+                case 7:
+                    if(letter == 'n'){
+                        actualState = 47;
+                    }else {
+                        actualState = -1;
+                    }
+                    break;
 
-                    case 8:
-                        if (letter == 't') {
-                            actualState = 60;
-                        } else if (letter == 'u') {
-                            actualState = 52;
-                        } else {
-                            actualState = -1;
-                        }
-                        break;
+                case 8:
+                    if (letter == 't') {
+                        actualState = 60;
+                    } else if (letter == 'u') {
+                        actualState = 52;
+                    } else {
+                        actualState = -1;
+                    }
+                    break;
 
-                    case 9:
-                        if (letter == 'e') {
-                            actualState = 10;
-                        }
-                        break;
+                case 9:
+                    if (letter == 'e') {
+                        actualState = 10;
+                    } else {
+                        actualState = - 1;
+                    }
+                    break;
 
-                    case 10:
-                        if (letter == 'a') {
-                            actualState = 11;
-                        }
-                        break;
+                case 10:
+                    if (letter == 'a') {
+                        actualState = 11;
+                    } else {
+                        actualState = - 1;
+                    }
+                    break;
 
-                    case 11:
-                        if (letter == 'r') {
-                            actualState = 12;
-                        }
-                        break;
+                case 11:
+                    if (letter == 'r') {
+                        actualState = 12;
+                    } else {
+                        actualState = - 1;
+                    }
+                    break;
 
-                    case 12:
-                    actualState = -1;
+                case 12:
+                actualState = -1;
                 break;
         
                 case 13:
@@ -165,20 +197,17 @@ function Automata() {
                 case 21:
                     if(letter == 't'){
                         actualState = 22;
-                    }else {
-                        actualState = -1;
                     }
                 break;
         
                 case 22:
                     if(letter == 'a'){
                         actualState = 23;
-                    }else {
-                        actualState = -1;
                     }
                 break;
         
                 case 23:
+                    actualState = -1;
                 break;
         
                 case 24:
@@ -206,18 +235,39 @@ function Automata() {
                 break;
         
                 case 27:
+                    if(letter == 'n'){
+                        actualState = 28;
+                    }else {
+                        actualState = -1;
+                    }
                 break;
         
                 case 28:
+                    if(letter == 'o'){
+                        actualState = 29;
+                    }else {
+                        actualState = -1;
+                    }
                 break;
         
                 case 29:
+                    if(letter == 'r'){
+                        actualState = 30;
+                    }else {
+                        actualState = -1;
+                    }
                 break;
         
                 case 30:
+                    if(letter == 'e'){
+                        actualState = 31;
+                    }else {
+                        actualState = -1;
+                    }
                 break;
         
                 case 31:
+                    actualState = -1;
                 break;
         
                 case 32:
@@ -254,25 +304,50 @@ function Automata() {
         
                 case 36:
                     if(letter == 't'){
-                        actualState = 68;
+                        actualState = 67;
                     }else {
                         actualState = -1;
                     }
                 break;
         
                 case 37:
+                    if(letter == 'm'){
+                        actualState = 38;
+                    }else {
+                        actualState = -1;
+                    }
                 break;
         
                 case 38:
+                    if(letter == 'o'){
+                        actualState = 39;
+                    }else {
+                        actualState = -1;
+                    }
                 break;
         
                 case 39:
+                    if(letter == 'r'){
+                        actualState = 40;
+                    }else {
+                        actualState = -1;
+                    }
                 break;
         
                 case 40:
+                    if(letter == 'i'){
+                        actualState = 41;
+                    }else {
+                        actualState = -1;
+                    }
                 break;
         
                 case 41:
+                    if(letter == 'z'){
+                        actualState = 30;
+                    }else {
+                        actualState = -1;
+                    }
                 break;
         
                 case 42:
@@ -414,6 +489,8 @@ function Automata() {
                 case 60:
                     if (letter == 'o') {
                         actualState = 61;
+                    } else if (letter == 'e') {
+                        actualState = 63;
                     } else{
                         actualState = -1;
                     }
@@ -432,21 +509,34 @@ function Automata() {
                 break;
         
                 case 63:
+                    if (letter = 'p') {
+                        actualState = 64;
+                    } else{
+                        actualState = -1;
+                    }
                 break;
         
                 case 64:
+                    if (letter = 't') {
+                        actualState = 65;
+                    } else{
+                        actualState = -1;
+                    }
                 break;
         
                 case 65:
+                    if (letter = 'o') {
+                        actualState = 66;
+                    } else{
+                        actualState = -1;
+                    }
                 break;
         
                 case 66:
+                    actualState = -1;
                 break;
         
                 case 67:
-                break;
-        
-                case 68:
                     actualState = -1;
                 break;
 
@@ -457,6 +547,7 @@ function Automata() {
                 i++;
             }
         }
+        console.log(actualState)
         if(counter < words.length && !end) {
             for(i in finalValues){
                 if(finalValues[i] == actualState){
