@@ -1,4 +1,6 @@
 function Automata() {
+    var variable = document.getElementById("compiler").value;
+    console.log("DATA: " + variable);
     switch (variable) {
         case 0:
             break;
