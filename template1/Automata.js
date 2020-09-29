@@ -6,9 +6,10 @@ function Automata() {
     let actualState = 0;
     let isValid = false;
     let finalValues = [12, 20, 23, 31, 46, 59, 62, 66, 67];
+    let textAlert = "";
 
     while (!end) {
-        if (ccounter > words.length - 1 || words[counter] == "") {
+        if (counter > words.length - 1 || words[counter] == "") {
             end = true;
         } else {
             let i = 0;
