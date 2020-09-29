@@ -19,7 +19,6 @@ function Automata() {
                 case 0:
                     if(letter == 'c'){
                         actualState = 1;
-                        console.log("Success");
                     } else if(letter == 'i'){
                         actualState = 4;
                     }
