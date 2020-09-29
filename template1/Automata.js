@@ -6,6 +6,7 @@ function Automata() {
     let actualState = 0;
     let isValid = false;
     let finalValues = [12,20,23,31,46,59,62,67,68];
+    let textAlert = "";
     
     while(!end){
     if(counter > words.length - 1){
@@ -19,12 +20,16 @@ function Automata() {
                 case 0:
                     if(letter == 'c'){
                         actualState = 1;
-                    } else if(letter == 'i'){
-                        actualState = 4;
                     } else if(letter == 'o'){
                         actualState = 6;
                     } else if(letter == 's'){
                         actualState = 8;
+                    } else if(letter == 'd'){
+                        actualState = 2;
+                    } else if(letter == 'e'){
+                        actualState = 3;
+                    } else if(letter == 'r'){
+                        actualState = 7;
                     }
                 break;
         
@@ -37,9 +42,15 @@ function Automata() {
                 break;
         
                 case 2:
+                    if(letter == 'a'){
+                        actualState = 21;
+                    }
                 break;
         
                 case 3:
+                    if(letter == 'n'){
+                        actualState = 24;
+                    }
                 break;
         
                 case 4:
@@ -60,6 +71,9 @@ function Automata() {
                 break;
         
                 case 7:
+                    if(letter == 'n'){
+                        actualState = 47;
+                    }
                 break;
         
                 case 8:
@@ -143,21 +157,36 @@ function Automata() {
                 break;
         
                 case 21:
+                    if(letter == 't'){
+                        actualState = 22;
+                    }
                 break;
         
                 case 22:
+                    if(letter == 'a'){
+                        actualState = 23;
+                    }
                 break;
         
                 case 23:
                 break;
         
                 case 24:
+                    if(letter == 't'){
+                        actualState = 25;
+                    }
                 break;
         
                 case 25:
+                    if(letter == 'e'){
+                        actualState = 26;
+                    }
                 break;
         
                 case 26:
+                    if(letter == 'r'){
+                        actualState = 12;
+                    }
                 break;
         
                 case 27:
@@ -257,18 +286,33 @@ function Automata() {
                 break;
         
                 case 47:
+                    if(letter == 'u'){
+                        actualState = 48;
+                    }
                 break;
         
                 case 48:
+                    if(letter == 'm'){
+                        actualState = 49;
+                    }
                 break;
         
                 case 49:
+                    if(letter == 'b'){
+                        actualState = 50;
+                    }
                 break;
         
                 case 50:
+                    if(letter == 'e'){
+                        actualState = 51;
+                    }
                 break;
         
                 case 51:
+                    if(letter == 'r'){
+                        actualState = 12;
+                    }
                 break;
         
                 case 52:
@@ -377,18 +421,20 @@ function Automata() {
                 i++;
             }
         }
-        counter++;
-        for(i in finalValues){
-            if(finalValues[i] == actualState){
-                isValid = true;
+        if(counter < words.length) {
+            for(i in finalValues){
+                if(finalValues[i] == actualState){
+                    isValid = true;
+                    textAlert += "La cadena " +words[counter] + " es correcta\n";
+                }
+            }
+            if (!isValid){
+                textAlert += "La cadena " +words[counter] + " es incorrecta\n";
             }
         }
+        counter++;
+        isValid = false;
     }
-
-    if(isValid){
-        alert('La cadena es correcta');
-    } else {
-        alert('La cadena es incorrecta');
-    }
+    alert(textAlert);
     
 }
