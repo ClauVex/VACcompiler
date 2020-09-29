@@ -1,0 +1,80 @@
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    background: #1d1f20;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customTextArea {
+    display: flex;
+    width: 550px;
+    margin: 100px auto 0;
+}
+
+.customTextArea textarea {
+    width: 500px;
+    height: 350px;
+    display: block;
+    resize: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 0;
+    transition: box-shadow 0.5s;
+}
+
+.customTextArea textarea:focus {
+    outline: none;
+    box-shadow: 0 0 15px #36383f inset;
+}
+
+.customTextArea ul {
+    background: #36383f;
+    width: 50px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border-radius: 0 5px 5px 0;
+}
+
+.customTextArea button {
+    background: #111;
+    color: #fff;
+    display: block;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0;
+    margin: 10px auto 0;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    border-radius: 3px;
+}
+
+.customTextArea button:hover {
+    background: #666;
+}
+
+.customTextArea button:focus {
+    outline: none;
+    box-shadow: 0 0 15px inset #000;
+}
+
+.buttonIcon {
+    width: 15px;
+    height: 15px;
+}
+
+.containerImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+}
