@@ -4,7 +4,7 @@ function Automata() {
     let words = variable.split(" ");
     let end = false;
     let contador = 0;
-    let estadoAcual = 0;
+    let estadoActual = 0;
     let estadosAceptacion = ['12','20','23','31','46','59','62','67','68'];
     
     while(!end){
@@ -17,7 +17,7 @@ function Automata() {
             letter = words[contador].charAt(i);
             console.log(letter)
             console.log("i: "+i+"    contador:"+contador)
-            switch(estadoAcual){
+            switch(estadoActual){
                 case 0:
                 break;
         
