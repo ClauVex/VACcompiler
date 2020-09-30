@@ -12,7 +12,7 @@ function Automata() {
     let textAlert = "";
 
     while (!end) {
-        if (counter > words.length - 1 || words[counter] == "") {
+        if (counter > words.length - 1) {
             end = true;
         } else {
             let i = 0;
