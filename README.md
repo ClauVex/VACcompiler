@@ -9,7 +9,7 @@ Proyecto de Lenguajes y Autómatas por equipo, en el que se realizó una propues
 *   **memorize**
 *   **stepto**
 
-### EikaHer
+### ErikaHer
 *   **output**
 *   **stop**
 *   **supersede**
